@@ -18,36 +18,7 @@ Boligmappa er en digital plattform der boligeiere og fagpersoner lagrer og forva
 ## Oppgaven
 
 Bygg en enkel full-stack CRUD-applikasjon for å forvalte eiendomsdokumenter.
-
----
-
-### Domenemodell
-
-```
-Document
-  Id            : Guid
-  PropertyId    : Guid
-  Title         : string
-  DocumentType  : enum (BuildingPermit | QualityAssurance | Warranty | Invoice | Other)
-  UploadedAt    : DateTimeOffset
-  UploadedBy    : string
-```
-
----
-
-### Backend — C# / .NET Web API
-
-Implementer følgende endpoints:
-
-| Method   | Route                                    | Beskrivelse                          |
-|----------|------------------------------------------|--------------------------------------|
-| `GET`    | `/api/properties/{propertyId}/documents` | List alle dokumenter for en eiendom  |
-| `GET`    | `/api/documents/{id}`                    | Hent ett enkelt dokument             |
-| `POST`   | `/api/documents`                         | Opprett et nytt dokument             |
-| `PUT`    | `/api/documents/{id}`                    | Oppdater et eksisterende dokument    |
-| `DELETE` | `/api/documents/{id}`                    | Slett et dokument                    |
-
-- Bruk .NET 6 eller nyere
+- Bruk .NET 8 eller nyere
 - En in-memory store er tilstrekkelig — ingen ekte database kreves
 - Returner passende HTTP-statuskoder
 
